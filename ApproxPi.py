@@ -5,17 +5,28 @@
 import math
 import time
 
-
 #PLEASE NOTE - This is an optional, extra credit portion of the lab.
 
 def main():
   realPi = math.pi
 
   #ask user for decimal percision (up to 10)
-
+  precision = input("enter number of decimal place (1-10):")
+  if precision < 1 or precision > 10:
+    print("precision must be between 1 and 10.")
   start = time.time()
   #calculate pi using the approximation technique
   #Loop until the level of percision is reached
+  approxPi = 4/1
+  sign = -1
+  denom = 3
+  while round(approxPi, 2) != round(realPi, 2):
+    #print(approxPi)
+    approxPi = approxPi + (sign * 4 / denom)
+
+    sign = sign * -1
+    denom = denom + 2
+
 
   end = time.time()
 
