@@ -11,9 +11,8 @@ def main():
   realPi = math.pi
 
   #ask user for decimal percision (up to 10)
-  precision = input("enter number of decimal place (1-10):")
-  if precision < 1 or precision > 10:
-    print("precision must be between 1 and 10.")
+  precision = input("How many decimal places")
+  
   start = time.time()
   #calculate pi using the approximation technique
   #Loop until the level of percision is reached

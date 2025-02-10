@@ -10,16 +10,10 @@ def main():
   losses = 0
 
   playAgain = "Y"
-  while playAgain == "Y":
+  while playAgain == "Y": #Determine winner and state what happened to the user
+    computer = random.choice( ["R", "P", "S"] )
+    player = input("Pick your weapon (R, P, S): ")
 
-  #Create a loop that continues as long as the user wants to play.
-  #User can play as many games as they wish.
-   computer = random.choice( ["R", "P", "S"] )
-   player = input("Pick your weapon (R, P, S): ")
-  #Randomly choose the computer between 'R', 'P', or 'S'
-  #Prompt the user for their RPS selection
-  
-  #Determine winner and state what happened to the user
     if computer == "R": 
       print("Computer chose Rock")
     elif computer == "P":
@@ -61,10 +55,8 @@ def main():
     if player == "S" and computer == "P":
       print("win")
       wins = wins + 1
-    
   #Ask the user if they would like to play again.
-  playagain = input("Play again? (Y/N): ")
-
+    playAgain = input("Play again? (Y/N): ")
   #In the end, print the stats
   print("Wins \t Ties \t Losses")
   print("---- \t ---- \t ------")
